@@ -9,6 +9,10 @@ This was wibecoded and hacked together in 2 hours.
 Extract or clone the repository into your Godot project's addons folder:
 `res://GodotProject/addons/BF6PortalJsonImporter`
 
+> [!CAUTION]
+> **No Nested Folders**: If you download the ZIP from GitHub, ensure you don't have a double-folder structure (e.g., `addons/BF6PortalJsonImporter-main/BF6PortalJsonImporter/...`). 
+> The `plugin.cfg` file must be located exactly at `res://GodotProject/addons/BF6PortalJsonImporter/plugin.cfg`.
+
 ## Enable Plugin
 
 1.  Open your Godot project.
@@ -36,9 +40,17 @@ Extract or clone the repository into your Godot project's addons folder:
     -   Opens the file explorer to the location where `.tscn` files are saved.
 
 > [!NOTE]
-> The importer restores the **final world position** of every object.
-> Individual local transforms of parent/child relationships are **not** preserved; everything is placed based on its calculated world transform.
-> Gameplay assets, logic, and specific parameters from the original metadata may not be properly restored or mapped.
+> - The importer restores the **final world position** of every object.
+> - Individual local transforms of parent/child relationships are **not** preserved; everything is placed based on its calculated world transform.
+> - Gameplay assets, logic, and specific parameters from the original metadata may not be properly restored or mapped.
+
+## Troubleshooting
+
+### Error: "Unable to load the extension script"
+If you see an error about being unable to load `bf6_portal_json_importer.gd`, it usually means the folder structure is incorrect. 
+1. Disable the plugin in Project Settings.
+2. Ensure the plugin files are in `addons/BF6PortalJsonImporter/` and **NOT** nested inside another folder.
+3. Restart Godot.
 
 ## Requirements
 

@@ -4,7 +4,8 @@ extends EditorPlugin
 var dock
 
 func _enter_tree():
-	dock = preload("res://addons/BF6PortalJsonImporter/import_dock.tscn").instantiate()
+	var base_dir = get_script().get_path().get_base_dir()
+	dock = load(base_dir.path_join("import_dock.tscn")).instantiate()
 	add_control_to_dock(DOCK_SLOT_LEFT_UL, dock)
 
 func _exit_tree():
