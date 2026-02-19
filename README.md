@@ -1,7 +1,11 @@
 # BF6 Portal JSON Importer
 
 A Godot 4.4.1 addon for importing JSON scene data exported from the Battlefield 6 Portal SDK.
+
+
 It currently ONLY supports the spatial .json files directly exported from Godot and currently does not support the experience.json files.
+
+
 This was vibecoded and hacked together in 2 hours.
 
 ![Expected JSON Format](json_example.JPG)
