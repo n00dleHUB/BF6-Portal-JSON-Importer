@@ -245,11 +245,17 @@ func _generate_hierarchy(data):
 	for category in data.keys():
 		var items = data[category]
 		if typeof(items) == TYPE_ARRAY:
+			var counter = 0
 			for item in items:
+				if typeof(item) != TYPE_DICTIONARY:
+					counter += 1
+					continue
+					
 				var id = item.get("id", "")
 				if id == "":
-					id = category + "/" + item.get("name", "Unknown_" + str(item.get_instance_id()))
+					id = category + "/" + item.get("name", "Unknown_" + str(counter))
 				items_by_id[id] = item
+				counter += 1
 				
 				var current_path = id
 				while current_path != "":
