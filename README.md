@@ -37,7 +37,8 @@ Extract or clone the repository into your Godot project's addons folder:
 
 > [!NOTE]
 > The importer restores the **final world position** of every object.
-> However, the individual local transforms of parent/child relationships are **not** preserved; everything is placed based on its calculated world transform.
+> Individual local transforms of parent/child relationships are **not** preserved; everything is placed based on its calculated world transform.
+> Gameplay assets, logic, and specific parameters from the original metadata may not be properly restored or mapped.
 
 ## Requirements
 
