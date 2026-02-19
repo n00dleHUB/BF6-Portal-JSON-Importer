@@ -49,5 +49,5 @@ If you see an error about being unable to load `bf6_portal_json_importer.gd`:
 
 ## Requirements
 
--   **Godot 4.x**
+-   **Godot 4.x** (Tested in 4.4.1)
 -   **Object Library**: Your project must have the corresponding `.tscn` files in `res://objects/`. The importer searches recursively for filenames matching the JSON entries.
