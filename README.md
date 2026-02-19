@@ -1,8 +1,8 @@
 # BF6 Portal JSON Importer
 
-A Godot 4 addon for importing JSON scene data exported from the Battlefield 6 Portal SDK.
-
-This was wibecoded and hacked together in 2 hours.
+A Godot 4.4.1 addon for importing JSON scene data exported from the Battlefield 6 Portal SDK.
+It currently ONLY supports the spatial .json files directly exported from Godot and currently does not support the experience.json files.
+This was vibecoded and hacked together in 2 hours.
 
 ## Installation
 
@@ -30,7 +30,7 @@ Extract or clone the repository into your Godot project's addons folder:
 -   **Create .tscn File**:
     -   Saves the imported objects as a new `.tscn` scene file.
     -   **IMPORTANT**: If you drag this created `.tscn` file into another scene, you must right-click the node instance in the scene tree and select **Make Local**.
-    -   *Note: This step is only required for the `.tscn` workflow, not when using "Rebuild to Current Scene".*
+    -   This step is only required for the `.tscn` workflow, not when using "Rebuild to Current Scene".*
 
 -   **Open Output Folder**:
     -   Opens the file explorer to the location where `.tscn` files are saved.
