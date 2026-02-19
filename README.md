@@ -1,26 +1,37 @@
-# BF6 Portal JSON Importer Walkthrough
+# BF6 Portal JSON Importer
+
+A Godot 4 addon for importing JSON scene data exported from the Battlefield 6 Portal SDK.
 
 ## Installation
 
-1.  **Extract the Zip**: Unzip `BF6PortalJsonImporter.zip`.
-2.  **Copy Folder**: Drag and drop the `BF6PortalJsonImporter` folder into your Godot project's `addons/` directory.
-    *   Path should look like: `res://addons/BF6PortalJsonImporter/`
-3.  **Enable Plugin**:
-    *   Open Godot.
-    *   Go to **Project** -> **Project Settings**.
-    *   Click the **Plugins** tab.
-    *   Find **BF6 Portal JSON Importer** and check the **Enable** box.
+### Option 1: Download from GitHub (Recommended)
+1.  Go to the [Releases](https://github.com/n00dleHUB/BF6-Portal-JSON-Importer/releases) page (if available) or click the green **Code** button and select **Download ZIP**.
+2.  Extract the ZIP file.
+3.  Copy the folder `BF6PortalJsonImporter` into your Godot project's `addons/` directory.
+    -   **Important**: The path must be `res://addons/BF6PortalJsonImporter/`. Make sure you don't have nested folders (e.g., `addons/BF6-Portal-JSON-Importer-main/BF6PortalJsonImporter/`).
+
+### Option 2: Clone via Git
+Navigate to your project's `addons` folder and run:
+```bash
+git clone https://github.com/n00dleHUB/BF6-Portal-JSON-Importer.git BF6PortalJsonImporter
+```
+
+## Enable Plugin
+1.  Open your Godot project.
+2.  Go to **Project** -> **Project Settings**.
+3.  Click the **Plugins** tab.
+4.  Find **BF6 Portal JSON Importer** and check the **Enable** box.
 
 ## Usage
 
-1.  **Open Dock**: The plugin adds a new dock tab named "BF6 Portal JSON Importer" (bottom-left by default).
-2.  **Select Export**: Click **Browse** and select your `.json` export file (e.g., from the SDK export).
+1.  **Open Dock**: The plugin adds a dock tab named "BF6 Portal JSON Importer" (bottom-left by default).
+2.  **Select Export**: Click **Browse** and select your `.json` export file from the SDK.
 3.  **Rebuild**:
-    *   Make sure you have a Scene open where you want the objects to appear.
-    *   Click **Rebuild Scene**.
-4.  **Result**: The plugin will create a new Node3D container with all the objects from the JSON, positioned correctly.
+    -   Ensure you have the scene open where you want the objects.
+    -   Click **Rebuild Scene**.
+4.  **Result**: A new `Node3D` container will be created with all objects positioned correctly.
 
-## Troubleshooting
+## Requirements
 
--   **"Asset not found"**: Ensure your project has the object library in `res://objects/`. The plugin looks there recursively for `.tscn` files matching the JSON names.
--   **Plugin not showing**: Try reloading the project (Project -> Reload Current Project) after enabling it.
+-   **Godot 4.x**
+-   **Object Library**: Your project must have the corresponding `.tscn` files in `res://objects/`. The importer searches recursively for filenames matching the JSON entries.
